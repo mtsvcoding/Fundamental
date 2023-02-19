@@ -1,22 +1,22 @@
 package MethodsL;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class L01SignOfIntegerNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int[] input = Arrays.stream(scanner.nextLine().split(" "))
-                .mapToInt(Integer::parseInt)
-                .toArray();
+       int input = Integer.parseInt(scanner.nextLine());
 
-        printArr(input);
-
+       printNumSign(input);
     }
-    public static void printArr (int[] name) {
-        for (int i = 0; i < name.length ; i++) {
-            System.out.print(name[i] + " ");
+    public static void printNumSign (int parameter) {
+        if (parameter < 0){
+            System.out.printf("The number %d is negative.", parameter);
+        } else if (parameter > 0) {
+            System.out.printf("The number %d is positive.", parameter);
+        }else {
+            System.out.printf("The number %d is zero.", parameter);
         }
     }
 }
