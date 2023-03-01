@@ -34,7 +34,7 @@ public class P03CharactersInRange {
             StringBuilder sb = new StringBuilder();
             String temp = "";
 
-            for (int i = b - 1; i > a; i--) {
+            for (int i = b + 1; i < a; i++) {
                 char as = (char) i;
                 sb.append(as);
                 sb.append(" ");
