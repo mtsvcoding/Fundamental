@@ -13,15 +13,14 @@ public class P03CharactersInRange {
     }
     public static int charFromScan (Scanner scanner){
         String input = scanner.nextLine();
-        char a = input.charAt(0);
 
-        return a;
+        return input.charAt(0);
     }
 
     public static String getChar (int a, int b) {
+        StringBuilder sb = new StringBuilder();
+        String temp = "";
         if (a < b) {
-            StringBuilder sb = new StringBuilder();
-            String temp = "";
 
             for (int i = a + 1; i < b; i++) {
                 char as = (char) i;
@@ -29,10 +28,7 @@ public class P03CharactersInRange {
                 sb.append(" ");
                 temp = sb.toString();
             }
-            return temp;
         } else {
-            StringBuilder sb = new StringBuilder();
-            String temp = "";
 
             for (int i = b + 1; i < a; i++) {
                 char as = (char) i;
@@ -40,7 +36,7 @@ public class P03CharactersInRange {
                 sb.append(" ");
                 temp = sb.toString();
             }
-            return temp;
         }
+        return temp;
     }
 }
